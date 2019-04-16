@@ -1830,7 +1830,7 @@ class TCPDF_STATIC {
 	public static function url_exists($url) {
 		$crs = curl_init();
 		curl_setopt($crs, CURLOPT_URL, $url);
-		curl_setopt($crs, CURLOPT_NOBODY, true);
+		// curl_setopt($crs, CURLOPT_NOBODY, true);
 		curl_setopt($crs, CURLOPT_FAILONERROR, true);
 		if ((ini_get('open_basedir') == '') && (!ini_get('safe_mode'))) {
 			curl_setopt($crs, CURLOPT_FOLLOWLOCATION, true);
